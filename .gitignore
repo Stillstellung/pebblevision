@@ -1,0 +1,7 @@
+.worktrees
+.build/
+build/
+DerivedData/
+xcuserdata/
+*.xcuserdata
+*.xcworkspace

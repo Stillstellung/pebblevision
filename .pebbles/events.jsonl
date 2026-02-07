@@ -1,0 +1,65 @@
+{"type":"create","timestamp":"2026-02-07T19:42:57.481661Z","issue_id":"pebviz-2f5","payload":{"description":"all text entry fields appear configured for right-to-left text. we will be using english as pirmary language for this application. ","priority":"1","title":"all text entry fields appear configured for right-to-left text","type":"bug"}}
+{"type":"create","timestamp":"2026-02-07T19:43:52.735566Z","issue_id":"pebviz-06b","payload":{"description":"creating a new issue should refresh the main list","priority":"3","title":"creating a new issue should refresh the main list","type":"bug"}}
+{"type":"create","timestamp":"2026-02-07T19:44:42.909615Z","issue_id":"pebviz-c39","payload":{"description":"changing projects should refresh the main list. it does not do that right now","priority":"2","title":"changing projects should refresh the main list","type":"bug"}}
+{"type":"create","timestamp":"2026-02-07T19:45:52.338965Z","issue_id":"pebviz-279","payload":{"description":"determine a durable build automation that triggers when new code has been merged into the main git branch. the automation should build the real application like we have done previously.","priority":"0","title":"determine a durable build automation that triggers when merge to main","type":"chore"}}
+{"type":"status_update","timestamp":"2026-02-07T19:47:03.228331Z","issue_id":"pebviz-c39","payload":{"status":"in_progress"}}
+{"type":"status_update","timestamp":"2026-02-07T19:47:04.476689Z","issue_id":"pebviz-279","payload":{"status":"in_progress"}}
+{"type":"status_update","timestamp":"2026-02-07T19:47:04.58876Z","issue_id":"pebviz-2f5","payload":{"status":"in_progress"}}
+{"type":"status_update","timestamp":"2026-02-07T19:47:05.275179Z","issue_id":"pebviz-06b","payload":{"status":"in_progress"}}
+{"type":"close","timestamp":"2026-02-07T19:49:51.210784Z","issue_id":"pebviz-2f5","payload":{}}
+{"type":"close","timestamp":"2026-02-07T19:49:59.544842Z","issue_id":"pebviz-279","payload":{}}
+{"type":"close","timestamp":"2026-02-07T19:50:04.877704Z","issue_id":"pebviz-06b","payload":{}}
+{"type":"close","timestamp":"2026-02-07T19:51:20.836444Z","issue_id":"pebviz-c39","payload":{}}
+{"type":"create","timestamp":"2026-02-07T20:02:01.210694Z","issue_id":"pebviz-200","payload":{"description":"the status picker behaves poorly in the folowing way: if you click “show all”  and then decide you dont want to show all, unchecking other options doesnt hide them even if you manually refresh. ","priority":"1","title":"status picker issue","type":"bug"}}
+{"type":"create","timestamp":"2026-02-07T20:06:22.632948Z","issue_id":"pebviz-235","payload":{"description":"The app has no way to add, remove, or view dependency relationships (blocks or parent-child) on an issue. pb dep add/rm supports both --type blocks and --type parent-child. Add UI in the issue detail view to manage these relationships.","priority":"1","title":"Add UI for editing issue dependencies and parent-child relationships","type":"task"}}
+{"type":"close","timestamp":"2026-02-07T20:10:41.093878Z","issue_id":"pebviz-235","payload":{}}
+{"type":"create","timestamp":"2026-02-07T22:58:43.16329Z","issue_id":"pebviz-f94","payload":{"description":"both the title and description fields of the new issue modal show the text emerging from the rigth rather than  the left. the cursor cleaves to the right of the text box and the text is justified that way. it’s very distracting.","priority":"3","title":"the title field on new issue still rtl text conditions","type":"bug"}}
+{"type":"create","timestamp":"2026-02-07T22:59:52.672662Z","issue_id":"pebviz-c12","payload":{"description":"user pressing space doesn't reflect in text until next word  is typed. this leads to extra spurious spaces and weird looking text","priority":"1","title":"user pressing space doesn't reflect in text until next word appears","type":"bug"}}
+{"type":"create","timestamp":"2026-02-07T23:05:20.959019Z","issue_id":"pebviz-fa4","payload":{"description":"","priority":"4","title":"priority colors in the \"ready\" screen don't match those in \"issues\" screen","type":"bug"}}
+{"type":"create","timestamp":"2026-02-07T23:06:52.616053Z","issue_id":"pebviz-743","payload":{"description":"the text that indicates issue count and last refresh partially obscures the settings button","priority":"4","title":"issue count and 'last refreshed' indicator obscures settings button","type":"bug"}}
+{"type":"create","timestamp":"2026-02-07T23:07:46.910971Z","issue_id":"pebviz-2cd","payload":{"description":"","priority":"2","title":"PebbleVision Awareness of Git and claude-team","type":"epic"}}
+{"type":"create","timestamp":"2026-02-07T23:08:49.966098Z","issue_id":"pebviz-64f","payload":{"description":"detail pane should show details about the assigned claude-team worker if an issue is in  “in progress” status","priority":"2","title":"detail pane should show details about the assigned claude-team worker","type":"feature"}}
+{"type":"rename","timestamp":"2026-02-07T23:08:59.639577Z","issue_id":"pebviz-64f","payload":{"new_id":"pebviz-2cd.1"}}
+{"type":"dep_add","timestamp":"2026-02-07T23:08:59.639581Z","issue_id":"pebviz-2cd.1","payload":{"dep_type":"parent-child","depends_on":"pebviz-2cd"}}
+{"type":"create","timestamp":"2026-02-07T23:11:11.619163Z","issue_id":"pebviz-8c8","payload":{"description":"\"search issues\"  box  doesn't play nicely with using the details pane and window resizing. it will overlap and block other ui elements at some points","priority":"1","title":"\"search issues\"  box  doesn't play nicely with using the details pane and window resizing","type":"bug"}}
+{"type":"status_update","timestamp":"2026-02-07T23:15:25.133017Z","issue_id":"pebviz-200","payload":{"status":"in_progress"}}
+{"type":"status_update","timestamp":"2026-02-07T23:15:26.861575Z","issue_id":"pebviz-8c8","payload":{"status":"in_progress"}}
+{"type":"status_update","timestamp":"2026-02-07T23:15:27.299877Z","issue_id":"pebviz-743","payload":{"status":"in_progress"}}
+{"type":"status_update","timestamp":"2026-02-07T23:15:27.50555Z","issue_id":"pebviz-c12","payload":{"status":"in_progress"}}
+{"type":"status_update","timestamp":"2026-02-07T23:16:03.543777Z","issue_id":"pebviz-fa4","payload":{"status":"in_progress"}}
+{"type":"close","timestamp":"2026-02-07T23:16:07.147434Z","issue_id":"pebviz-743","payload":{}}
+{"type":"close","timestamp":"2026-02-07T23:16:07.224752Z","issue_id":"pebviz-fa4","payload":{}}
+{"type":"close","timestamp":"2026-02-07T23:17:12.988175Z","issue_id":"pebviz-200","payload":{}}
+{"type":"close","timestamp":"2026-02-07T23:18:08.472611Z","issue_id":"pebviz-c12","payload":{}}
+{"type":"status_update","timestamp":"2026-02-07T23:18:09.64241Z","issue_id":"pebviz-f94","payload":{"status":"in_progress"}}
+{"type":"close","timestamp":"2026-02-07T23:18:12.725419Z","issue_id":"pebviz-f94","payload":{}}
+{"type":"close","timestamp":"2026-02-07T23:21:23.963536Z","issue_id":"pebviz-8c8","payload":{}}
+{"type":"create","timestamp":"2026-02-07T23:31:02.25154Z","issue_id":"pebviz-336","payload":{"description":"Heirarchy and Dependencies should be selectable when making new issue. Ideally, there is a dropdown/typeahead of existing issue IDs that show a preview of their title","priority":"1","title":"Heirarchy and Dependencies should be selectable when making new issue","type":"feature"}}
+{"type":"status_update","timestamp":"2026-02-07T23:32:36.726492Z","issue_id":"pebviz-336","payload":{"status":"in_progress"}}
+{"type":"close","timestamp":"2026-02-07T23:34:02.177656Z","issue_id":"pebviz-336","payload":{}}
+{"type":"create","timestamp":"2026-02-07T23:34:46.919693Z","issue_id":"pebviz-3a0","payload":{"description":"","priority":"2","title":"fart","type":"task"}}
+{"type":"rename","timestamp":"2026-02-07T23:34:46.970926Z","issue_id":"pebviz-3a0","payload":{"new_id":"pebviz-2cd.2"}}
+{"type":"dep_add","timestamp":"2026-02-07T23:34:46.97093Z","issue_id":"pebviz-2cd.2","payload":{"dep_type":"parent-child","depends_on":"pebviz-2cd"}}
+{"type":"close","timestamp":"2026-02-07T23:34:57.290695Z","issue_id":"pebviz-2cd.2","payload":{}}
+{"type":"create","timestamp":"2026-02-07T23:35:28.078339Z","issue_id":"pebviz-4df","payload":{"description":"","priority":"2","title":"issues view doesn't auto-refresh after closing an issue","type":"bug"}}
+{"type":"update","timestamp":"2026-02-07T23:35:35.086229Z","issue_id":"pebviz-2cd","payload":{"priority":"3"}}
+{"type":"update","timestamp":"2026-02-07T23:35:40.368321Z","issue_id":"pebviz-2cd.1","payload":{"priority":"3"}}
+{"type":"title_updated","timestamp":"2026-02-07T23:36:18.316849Z","issue_id":"pebviz-4df","payload":{"title":"issues view doesn't auto-refresh after closing an issue or making metadata changes to an issue"}}
+{"type":"update","timestamp":"2026-02-07T23:36:18.555921Z","issue_id":"pebviz-4df","payload":{"description":"issues list view doesn't auto-refresh after closing an issue or making metadata changes to an issue such as status, priority, etc"}}
+{"type":"create","timestamp":"2026-02-07T23:37:17.540926Z","issue_id":"pebviz-c64","payload":{"description":"the event log shows nothing but an error currently","priority":"1","title":"event log seems broken","type":"task"}}
+{"type":"update","timestamp":"2026-02-07T23:37:27.791048Z","issue_id":"pebviz-c64","payload":{"type":"bug"}}
+{"type":"create","timestamp":"2026-02-07T23:39:53.803664Z","issue_id":"pebviz-614","payload":{"description":"dependencies view issue search should also be typeahead dropdown like we implemented for the new issue modal’s heirarchy and dependency thingy","priority":"2","title":"dependencies view issue search should also be typeahead dropdown","type":"feature"}}
+{"type":"close","timestamp":"2026-02-07T23:42:19.118263Z","issue_id":"pebviz-4df","payload":{}}
+{"type":"close","timestamp":"2026-02-07T23:42:19.168007Z","issue_id":"pebviz-c64","payload":{}}
+{"type":"close","timestamp":"2026-02-07T23:46:35.373702Z","issue_id":"pebviz-614","payload":{}}
+{"type":"dep_rm","timestamp":"2026-02-07T23:48:50.372413Z","issue_id":"pebviz-2cd.2","payload":{"dep_type":"parent-child","depends_on":"pebviz-2cd"}}
+{"type":"create","timestamp":"2026-02-07T23:49:53.205548Z","issue_id":"pebviz-dcd","payload":{"description":"move the refresh and add buttons to be right next to the \"pebblevision\" words","priority":"1","title":"move the refresh and add buttons to be right next to the \"pebblevision\" words","type":"task"}}
+{"type":"close","timestamp":"2026-02-07T23:52:22.041094Z","issue_id":"pebviz-dcd","payload":{}}
+{"type":"create","timestamp":"2026-02-08T00:03:12.190187Z","issue_id":"pebviz-0ec","payload":{"description":"Go through an investigation task of what if anything would be smart or good to change about PebbleVision before posting on Git. Create rudimentary docs. ","priority":"1","title":"Prepare PebbleVision to be posted on Github","type":"chore"}}
+{"type":"create","timestamp":"2026-02-08T15:17:49.945422Z","issue_id":"pebviz-fd3","payload":{"description":"detail pane should show details about the associated commits and PRs (local and upstream if applicable)","priority":"2","title":"detail pane should show details about the associated commits and PRs","type":"feature"}}
+{"type":"rename","timestamp":"2026-02-08T15:17:50.082238Z","issue_id":"pebviz-fd3","payload":{"new_id":"pebviz-2cd.3"}}
+{"type":"dep_add","timestamp":"2026-02-08T15:17:50.082242Z","issue_id":"pebviz-2cd.3","payload":{"dep_type":"parent-child","depends_on":"pebviz-2cd"}}
+{"type":"close","timestamp":"2026-02-08T15:43:46.766316Z","issue_id":"pebviz-2cd.1","payload":{}}
+{"type":"close","timestamp":"2026-02-08T15:43:46.819193Z","issue_id":"pebviz-2cd.3","payload":{}}
+{"type":"close","timestamp":"2026-02-08T16:00:52.878984Z","issue_id":"pebviz-2cd","payload":{}}
+{"type":"status_update","timestamp":"2026-02-08T17:58:36.199125Z","issue_id":"pebviz-0ec","payload":{"status":"in_progress"}}

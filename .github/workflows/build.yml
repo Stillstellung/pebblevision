@@ -1,0 +1,61 @@
+name: Build PebbleVision
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build & Test
+    runs-on: macos-15
+    defaults:
+      run:
+        working-directory: PebbleVision
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_16.2.app/Contents/Developer
+
+      - name: Build Release
+        run: |
+          xcodebuild build \
+            -scheme PebbleVision \
+            -configuration Release \
+            -derivedDataPath ../build \
+            CODE_SIGN_IDENTITY=- \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Run Tests
+        run: |
+          xcodebuild test \
+            -scheme PebbleVision \
+            -configuration Debug \
+            -derivedDataPath ../build \
+            CODE_SIGN_IDENTITY=- \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Package App Bundle
+        run: |
+          APP_PATH="../build/Build/Products/Release/PebbleVision.app"
+          if [ -d "$APP_PATH" ]; then
+            ditto -c -k --sequesterRsrc --keepParent "$APP_PATH" ../PebbleVision.app.zip
+          else
+            echo "::error::App bundle not found at $APP_PATH"
+            exit 1
+          fi
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PebbleVision.app
+          path: PebbleVision.app.zip
+          retention-days: 14
