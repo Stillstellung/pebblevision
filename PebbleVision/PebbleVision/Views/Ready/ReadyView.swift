@@ -37,7 +37,7 @@ struct ReadyView: View {
             while !Task.isCancelled {
                 try? await Task.sleep(for: .seconds(10))
                 guard !Task.isCancelled else { break }
-                await viewModel.fetchReady()
+                await viewModel.fetchReady(silent: true)
             }
         }
         .toolbar {

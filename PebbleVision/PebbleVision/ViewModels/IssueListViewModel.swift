@@ -35,8 +35,8 @@ final class IssueListViewModel {
         }
     }
 
-    func fetchIssues() async {
-        isLoading = true
+    func fetchIssues(silent: Bool = false) async {
+        if !silent { isLoading = true }
         error = nil
         do {
             issues = try await client.listIssues(
