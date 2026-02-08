@@ -59,6 +59,13 @@ struct IssueListView: View {
         .task {
             await viewModel.fetchIssues()
         }
+        .task {
+            while !Task.isCancelled {
+                try? await Task.sleep(for: .seconds(10))
+                guard !Task.isCancelled else { break }
+                await viewModel.fetchIssues()
+            }
+        }
         .onChange(of: viewModel.statusFilter) { _, _ in
             Task { await viewModel.fetchIssues() }
         }

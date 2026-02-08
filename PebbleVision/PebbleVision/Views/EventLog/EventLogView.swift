@@ -38,6 +38,13 @@ struct EventLogView: View {
         .task {
             await viewModel.fetchEvents()
         }
+        .task {
+            while !Task.isCancelled {
+                try? await Task.sleep(for: .seconds(10))
+                guard !Task.isCancelled else { break }
+                await viewModel.fetchEvents()
+            }
+        }
     }
 
     private var filterBar: some View {
