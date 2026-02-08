@@ -13,6 +13,22 @@ enum IssueStatus: String, Codable, CaseIterable, Sendable {
         case .closed: "Closed"
         }
     }
+
+    var sortOrder: Int {
+        switch self {
+        case .open: 0
+        case .inProgress: 1
+        case .closed: 2
+        }
+    }
+}
+
+/// Sort field for issue lists.
+enum IssueSortField: String, CaseIterable {
+    case date = "Date"
+    case priority = "Priority"
+    case type = "Type"
+    case status = "Status"
 }
 
 /// Severity level P0 (critical) through P4 (trivial).
