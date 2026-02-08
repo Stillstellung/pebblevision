@@ -18,8 +18,8 @@ final class ReadyViewModel {
     }
 
     /// Fetches unblocked issues using `pb ready --json`.
-    func fetchReady() async {
-        isLoading = true
+    func fetchReady(silent: Bool = false) async {
+        if !silent { isLoading = true }
         error = nil
         do {
             readyIssues = try await client.readyIssues(in: project)
