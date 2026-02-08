@@ -33,6 +33,13 @@ struct ReadyView: View {
         .task {
             await viewModel.fetchReady()
         }
+        .task {
+            while !Task.isCancelled {
+                try? await Task.sleep(for: .seconds(10))
+                guard !Task.isCancelled else { break }
+                await viewModel.fetchReady()
+            }
+        }
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button {
