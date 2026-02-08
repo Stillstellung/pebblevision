@@ -20,10 +20,10 @@ struct ReadyView: View {
                 }
             } else if let error = viewModel.error {
                 errorView(error)
-            } else if viewModel.readyIssues.isEmpty {
+            } else if viewModel.sortedReadyIssues.isEmpty {
                 emptyState
             } else {
-                List(viewModel.readyIssues) { issue in
+                List(viewModel.sortedReadyIssues) { issue in
                     ReadyIssueRow(issue: issue)
                 }
                 .listStyle(.inset)
@@ -37,10 +37,13 @@ struct ReadyView: View {
             while !Task.isCancelled {
                 try? await Task.sleep(for: .seconds(10))
                 guard !Task.isCancelled else { break }
-                await viewModel.fetchReady()
+                await viewModel.fetchReady(silent: true)
             }
         }
         .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                IssueSortMenu(sortField: $viewModel.sortField, sortAscending: $viewModel.sortAscending)
+            }
             ToolbarItem(placement: .primaryAction) {
                 Button {
                     Task { await viewModel.fetchReady() }

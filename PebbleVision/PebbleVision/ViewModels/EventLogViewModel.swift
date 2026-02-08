@@ -21,8 +21,8 @@ final class EventLogViewModel {
     }
 
     /// Fetches events using `pb log --json --no-pager --no-git`.
-    func fetchEvents() async {
-        isLoading = true
+    func fetchEvents(silent: Bool = false) async {
+        if !silent { isLoading = true }
         error = nil
         do {
             events = try await client.eventLog(

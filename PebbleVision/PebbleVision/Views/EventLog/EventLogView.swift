@@ -42,7 +42,7 @@ struct EventLogView: View {
             while !Task.isCancelled {
                 try? await Task.sleep(for: .seconds(10))
                 guard !Task.isCancelled else { break }
-                await viewModel.fetchEvents()
+                await viewModel.fetchEvents(silent: true)
             }
         }
     }

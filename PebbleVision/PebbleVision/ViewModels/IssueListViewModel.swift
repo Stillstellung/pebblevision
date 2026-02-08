@@ -16,6 +16,10 @@ final class IssueListViewModel {
     var showAll = false
     var searchText = ""
 
+    // Sort state
+    var sortField: IssueSortField = .date
+    var sortAscending = false
+
     private let client: PBClient
     private let project: Project
 
@@ -35,8 +39,25 @@ final class IssueListViewModel {
         }
     }
 
-    func fetchIssues() async {
-        isLoading = true
+    var sortedIssues: [Issue] {
+        filteredIssues.sorted { a, b in
+            let result: Bool
+            switch sortField {
+            case .date:
+                result = (a.createdAt ?? .distantPast) < (b.createdAt ?? .distantPast)
+            case .priority:
+                result = a.priority < b.priority
+            case .type:
+                result = a.issueType.localizedCompare(b.issueType) == .orderedAscending
+            case .status:
+                result = a.status.sortOrder < b.status.sortOrder
+            }
+            return sortAscending ? result : !result
+        }
+    }
+
+    func fetchIssues(silent: Bool = false) async {
+        if !silent { isLoading = true }
         error = nil
         do {
             issues = try await client.listIssues(

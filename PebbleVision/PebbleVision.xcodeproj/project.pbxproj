@@ -67,6 +67,7 @@
 		B1A00000000000000000FF06 /* PriorityBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF06 /* PriorityBadge.swift */; };
 		B1A00000000000000000FF07 /* StatusBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF07 /* StatusBadge.swift */; };
 		B1A00000000000000000FF08 /* TypeBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF08 /* TypeBadge.swift */; };
+		B1A00000000000000000FF0D /* IssueSortMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF0D /* IssueSortMenu.swift */; };
 		/* Views/Sidebar */
 		B1A00000000000000000FF09 /* ProjectSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF09 /* ProjectSelectorView.swift */; };
 		B1A00000000000000000FF0A /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF0A /* SidebarView.swift */; };
@@ -151,6 +152,7 @@
 		A1A00000000000000000FF06 /* PriorityBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityBadge.swift; sourceTree = "<group>"; };
 		A1A00000000000000000FF07 /* StatusBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBadge.swift; sourceTree = "<group>"; };
 		A1A00000000000000000FF08 /* TypeBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeBadge.swift; sourceTree = "<group>"; };
+		A1A00000000000000000FF0D /* IssueSortMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueSortMenu.swift; sourceTree = "<group>"; };
 		/* Views/Sidebar */
 		A1A00000000000000000FF09 /* ProjectSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSelectorView.swift; sourceTree = "<group>"; };
 		A1A00000000000000000FF0A /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				A1A00000000000000000FF06 /* PriorityBadge.swift */,
 				A1A00000000000000000FF07 /* StatusBadge.swift */,
 				A1A00000000000000000FF08 /* TypeBadge.swift */,
+				A1A00000000000000000FF0D /* IssueSortMenu.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				B1A00000000000000000FF06 /* PriorityBadge.swift in Sources */,
 				B1A00000000000000000FF07 /* StatusBadge.swift in Sources */,
 				B1A00000000000000000FF08 /* TypeBadge.swift in Sources */,
+				B1A00000000000000000FF0D /* IssueSortMenu.swift in Sources */,
 				B1A00000000000000000FF09 /* ProjectSelectorView.swift in Sources */,
 				B1A00000000000000000FF0A /* SidebarView.swift in Sources */,
 				B1A00000000000000000FF0B /* PreviewData.swift in Sources */,
