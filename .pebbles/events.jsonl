@@ -63,3 +63,6 @@
 {"type":"close","timestamp":"2026-02-08T15:43:46.819193Z","issue_id":"pebviz-2cd.3","payload":{}}
 {"type":"close","timestamp":"2026-02-08T16:00:52.878984Z","issue_id":"pebviz-2cd","payload":{}}
 {"type":"status_update","timestamp":"2026-02-08T17:58:36.199125Z","issue_id":"pebviz-0ec","payload":{"status":"in_progress"}}
+{"type":"close","timestamp":"2026-02-08T18:06:17.515582Z","issue_id":"pebviz-0ec","payload":{}}
+{"type":"create","timestamp":"2026-02-08T18:10:55.552645Z","issue_id":"pebviz-c62","payload":{"description":"","priority":"1","title":"Fix xcodeproj to include all Swift source files for xcodebuild CI","type":"bug"}}
+{"type":"status_update","timestamp":"2026-02-08T18:12:11.646899Z","issue_id":"pebviz-c62","payload":{"status":"in_progress"}}

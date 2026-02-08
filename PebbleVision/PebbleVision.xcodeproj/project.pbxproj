@@ -7,24 +7,164 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B10000000000000000000003 /* PebbleVisionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000003 /* PebbleVisionApp.swift */; };
-		B10000000000000000000004 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000004 /* AppState.swift */; };
-		B10000000000000000000005 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000005 /* ContentView.swift */; };
-		B10000000000000000000006 /* ProjectManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000006 /* ProjectManagerViewModel.swift */; };
-		B10000000000000000000007 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000007 /* SidebarView.swift */; };
-		B10000000000000000000008 /* ProjectSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000008 /* ProjectSelectorView.swift */; };
-		B10000000000000000000009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000009 /* Assets.xcassets */; };
+		/* App */
+		B1A0000000000000000000A1 /* PebbleVisionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000A1 /* PebbleVisionApp.swift */; };
+		B1A0000000000000000000A2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000A2 /* AppState.swift */; };
+		B1A0000000000000000000A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000A3 /* ContentView.swift */; };
+		/* Models */
+		B1A0000000000000000000B1 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000B1 /* Dependency.swift */; };
+		B1A0000000000000000000B2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000B2 /* Event.swift */; };
+		B1A0000000000000000000B3 /* GitCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000B3 /* GitCommit.swift */; };
+		B1A0000000000000000000B4 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000B4 /* Issue.swift */; };
+		B1A0000000000000000000B5 /* IssueComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000B5 /* IssueComment.swift */; };
+		B1A0000000000000000000B6 /* PBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000B6 /* PBError.swift */; };
+		B1A0000000000000000000B7 /* PBTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000B7 /* PBTypes.swift */; };
+		B1A0000000000000000000B8 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000B8 /* Project.swift */; };
+		B1A0000000000000000000B9 /* WorkerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000B9 /* WorkerInfo.swift */; };
+		/* Services */
+		B1A0000000000000000000C1 /* GitInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000C1 /* GitInfoService.swift */; };
+		B1A0000000000000000000C2 /* PBClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000C2 /* PBClient.swift */; };
+		B1A0000000000000000000C3 /* PBJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000C3 /* PBJSONParser.swift */; };
+		B1A0000000000000000000C4 /* PBOutputParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000C4 /* PBOutputParser.swift */; };
+		B1A0000000000000000000C5 /* ProjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000C5 /* ProjectStore.swift */; };
+		B1A0000000000000000000C6 /* WorkerInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000C6 /* WorkerInfoService.swift */; };
+		/* Utilities */
+		B1A0000000000000000000D1 /* DateFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000D1 /* DateFormatting.swift */; };
+		B1A0000000000000000000D2 /* ProcessRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000D2 /* ProcessRunner.swift */; };
+		/* ViewModels */
+		B1A0000000000000000000E1 /* DependencyTreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000E1 /* DependencyTreeViewModel.swift */; };
+		B1A0000000000000000000E2 /* EventLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000E2 /* EventLogViewModel.swift */; };
+		B1A0000000000000000000E3 /* IssueCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000E3 /* IssueCreateViewModel.swift */; };
+		B1A0000000000000000000E4 /* IssueDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000E4 /* IssueDetailViewModel.swift */; };
+		B1A0000000000000000000E5 /* IssueListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000E5 /* IssueListViewModel.swift */; };
+		B1A0000000000000000000E6 /* ProjectManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000E6 /* ProjectManagerViewModel.swift */; };
+		B1A0000000000000000000E7 /* ReadyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000E7 /* ReadyViewModel.swift */; };
+		/* Views/Dependencies */
+		B1A0000000000000000000F1 /* DepNodeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000F1 /* DepNodeRowView.swift */; };
+		B1A0000000000000000000F2 /* DependencyTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000F2 /* DependencyTreeView.swift */; };
+		/* Views/EventLog */
+		B1A0000000000000000000F3 /* EventLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000F3 /* EventLogView.swift */; };
+		B1A0000000000000000000F4 /* EventRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000F4 /* EventRowView.swift */; };
+		/* Views/Issues */
+		B1A0000000000000000000F5 /* GitInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000F5 /* GitInfoSection.swift */; };
+		B1A0000000000000000000F6 /* IssueCreateSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000F6 /* IssueCreateSheet.swift */; };
+		B1A0000000000000000000F7 /* IssueDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000F7 /* IssueDetailView.swift */; };
+		B1A0000000000000000000F8 /* IssueEditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000F8 /* IssueEditSheet.swift */; };
+		B1A0000000000000000000F9 /* IssueFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000F9 /* IssueFilterBar.swift */; };
+		B1A0000000000000000000FA /* IssueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000FA /* IssueListView.swift */; };
+		B1A0000000000000000000FB /* IssueRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000FB /* IssueRowView.swift */; };
+		B1A0000000000000000000FC /* WorkerInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000FC /* WorkerInfoSection.swift */; };
+		/* Views/Ready */
+		B1A0000000000000000000FD /* ReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000FD /* ReadyView.swift */; };
+		/* Views/Settings */
+		B1A0000000000000000000FE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A0000000000000000000FE /* SettingsView.swift */; };
+		/* Views/Shared */
+		B1A00000000000000000FF01 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF01 /* EmptyStateView.swift */; };
+		B1A00000000000000000FF02 /* ErrorBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF02 /* ErrorBanner.swift */; };
+		B1A00000000000000000FF03 /* IssueSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF03 /* IssueSearchField.swift */; };
+		B1A00000000000000000FF04 /* IssueTypeahead.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF04 /* IssueTypeahead.swift */; };
+		B1A00000000000000000FF05 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF05 /* LoadingOverlay.swift */; };
+		B1A00000000000000000FF06 /* PriorityBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF06 /* PriorityBadge.swift */; };
+		B1A00000000000000000FF07 /* StatusBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF07 /* StatusBadge.swift */; };
+		B1A00000000000000000FF08 /* TypeBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF08 /* TypeBadge.swift */; };
+		/* Views/Sidebar */
+		B1A00000000000000000FF09 /* ProjectSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF09 /* ProjectSelectorView.swift */; };
+		B1A00000000000000000FF0A /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF0A /* SidebarView.swift */; };
+		/* Preview Content */
+		B1A00000000000000000FF0B /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF0B /* PreviewData.swift */; };
+		/* Resources */
+		B1A00000000000000000FF0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FF0C /* Assets.xcassets */; };
+		/* Tests */
+		B1A00000000000000000FFA1 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FFA1 /* ModelTests.swift */; };
+		B1A00000000000000000FFA2 /* PBJSONParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FFA2 /* PBJSONParserTests.swift */; };
+		B1A00000000000000000FFA3 /* PBOutputParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A00000000000000000FFA3 /* PBOutputParserTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C1A00000000000000000CC01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = G10000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D10000000000000000000001;
+			remoteInfo = PebbleVision;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		A10000000000000000000003 /* PebbleVisionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PebbleVisionApp.swift; sourceTree = "<group>"; };
-		A10000000000000000000004 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		A10000000000000000000005 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A10000000000000000000006 /* ProjectManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagerViewModel.swift; sourceTree = "<group>"; };
-		A10000000000000000000007 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
-		A10000000000000000000008 /* ProjectSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSelectorView.swift; sourceTree = "<group>"; };
-		A10000000000000000000009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		/* App */
+		A1A0000000000000000000A1 /* PebbleVisionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PebbleVisionApp.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000A2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		/* Models */
+		A1A0000000000000000000B1 /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000B2 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000B3 /* GitCommit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitCommit.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000B4 /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000B5 /* IssueComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueComment.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000B6 /* PBError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBError.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000B7 /* PBTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBTypes.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000B8 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000B9 /* WorkerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerInfo.swift; sourceTree = "<group>"; };
+		/* Services */
+		A1A0000000000000000000C1 /* GitInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitInfoService.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000C2 /* PBClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBClient.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000C3 /* PBJSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBJSONParser.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000C4 /* PBOutputParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBOutputParser.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000C5 /* ProjectStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectStore.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000C6 /* WorkerInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerInfoService.swift; sourceTree = "<group>"; };
+		/* Utilities */
+		A1A0000000000000000000D1 /* DateFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatting.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000D2 /* ProcessRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessRunner.swift; sourceTree = "<group>"; };
+		/* ViewModels */
+		A1A0000000000000000000E1 /* DependencyTreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyTreeViewModel.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000E2 /* EventLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogViewModel.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000E3 /* IssueCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCreateViewModel.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000E4 /* IssueDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailViewModel.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000E5 /* IssueListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListViewModel.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000E6 /* ProjectManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagerViewModel.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000E7 /* ReadyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyViewModel.swift; sourceTree = "<group>"; };
+		/* Views/Dependencies */
+		A1A0000000000000000000F1 /* DepNodeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepNodeRowView.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000F2 /* DependencyTreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyTreeView.swift; sourceTree = "<group>"; };
+		/* Views/EventLog */
+		A1A0000000000000000000F3 /* EventLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogView.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000F4 /* EventRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowView.swift; sourceTree = "<group>"; };
+		/* Views/Issues */
+		A1A0000000000000000000F5 /* GitInfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitInfoSection.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000F6 /* IssueCreateSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCreateSheet.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000F7 /* IssueDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailView.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000F8 /* IssueEditSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueEditSheet.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000F9 /* IssueFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueFilterBar.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000FA /* IssueListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListView.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000FB /* IssueRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRowView.swift; sourceTree = "<group>"; };
+		A1A0000000000000000000FC /* WorkerInfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerInfoSection.swift; sourceTree = "<group>"; };
+		/* Views/Ready */
+		A1A0000000000000000000FD /* ReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyView.swift; sourceTree = "<group>"; };
+		/* Views/Settings */
+		A1A0000000000000000000FE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		/* Views/Shared */
+		A1A00000000000000000FF01 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		A1A00000000000000000FF02 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
+		A1A00000000000000000FF03 /* IssueSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueSearchField.swift; sourceTree = "<group>"; };
+		A1A00000000000000000FF04 /* IssueTypeahead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTypeahead.swift; sourceTree = "<group>"; };
+		A1A00000000000000000FF05 /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
+		A1A00000000000000000FF06 /* PriorityBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityBadge.swift; sourceTree = "<group>"; };
+		A1A00000000000000000FF07 /* StatusBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBadge.swift; sourceTree = "<group>"; };
+		A1A00000000000000000FF08 /* TypeBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeBadge.swift; sourceTree = "<group>"; };
+		/* Views/Sidebar */
+		A1A00000000000000000FF09 /* ProjectSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSelectorView.swift; sourceTree = "<group>"; };
+		A1A00000000000000000FF0A /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		/* Preview Content */
+		A1A00000000000000000FF0B /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		/* Resources */
+		A1A00000000000000000FF0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		/* Products */
 		D10000000000000000000002 /* PebbleVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PebbleVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D10000000000000000000003 /* PebbleVisionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PebbleVisionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		/* Tests */
+		A1A00000000000000000FFA1 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		A1A00000000000000000FFA2 /* PBJSONParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBJSONParserTests.swift; sourceTree = "<group>"; };
+		A1A00000000000000000FFA3 /* PBOutputParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBOutputParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +175,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E20000000000000000000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C10000000000000000000000 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				C10000000000000000000001 /* PebbleVision */,
+				C10000000000000000000009 /* PebbleVisionTests */,
+				C10000000000000000000008 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
 		C10000000000000000000001 /* PebbleVision */ = {
 			isa = PBXGroup;
 			children = (
 				C10000000000000000000002 /* App */,
+				C10000000000000000000010 /* Models */,
+				C10000000000000000000011 /* Services */,
+				C10000000000000000000012 /* Utilities */,
 				C10000000000000000000004 /* ViewModels */,
 				C10000000000000000000005 /* Views */,
+				C10000000000000000000013 /* Preview Content */,
 				C10000000000000000000007 /* Resources */,
-				C10000000000000000000008 /* Products */,
 			);
 			path = PebbleVision;
 			sourceTree = "<group>";
@@ -53,17 +212,61 @@
 		C10000000000000000000002 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				A10000000000000000000003 /* PebbleVisionApp.swift */,
-				A10000000000000000000004 /* AppState.swift */,
-				A10000000000000000000005 /* ContentView.swift */,
+				A1A0000000000000000000A1 /* PebbleVisionApp.swift */,
+				A1A0000000000000000000A2 /* AppState.swift */,
+				A1A0000000000000000000A3 /* ContentView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		C10000000000000000000010 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1A0000000000000000000B1 /* Dependency.swift */,
+				A1A0000000000000000000B2 /* Event.swift */,
+				A1A0000000000000000000B3 /* GitCommit.swift */,
+				A1A0000000000000000000B4 /* Issue.swift */,
+				A1A0000000000000000000B5 /* IssueComment.swift */,
+				A1A0000000000000000000B6 /* PBError.swift */,
+				A1A0000000000000000000B7 /* PBTypes.swift */,
+				A1A0000000000000000000B8 /* Project.swift */,
+				A1A0000000000000000000B9 /* WorkerInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C10000000000000000000011 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A1A0000000000000000000C1 /* GitInfoService.swift */,
+				A1A0000000000000000000C2 /* PBClient.swift */,
+				A1A0000000000000000000C3 /* PBJSONParser.swift */,
+				A1A0000000000000000000C4 /* PBOutputParser.swift */,
+				A1A0000000000000000000C5 /* ProjectStore.swift */,
+				A1A0000000000000000000C6 /* WorkerInfoService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C10000000000000000000012 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A1A0000000000000000000D1 /* DateFormatting.swift */,
+				A1A0000000000000000000D2 /* ProcessRunner.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		C10000000000000000000004 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A10000000000000000000006 /* ProjectManagerViewModel.swift */,
+				A1A0000000000000000000E1 /* DependencyTreeViewModel.swift */,
+				A1A0000000000000000000E2 /* EventLogViewModel.swift */,
+				A1A0000000000000000000E3 /* IssueCreateViewModel.swift */,
+				A1A0000000000000000000E4 /* IssueDetailViewModel.swift */,
+				A1A0000000000000000000E5 /* IssueListViewModel.swift */,
+				A1A0000000000000000000E6 /* ProjectManagerViewModel.swift */,
+				A1A0000000000000000000E7 /* ReadyViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -71,24 +274,102 @@
 		C10000000000000000000005 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C10000000000000000000014 /* Dependencies */,
+				C10000000000000000000015 /* EventLog */,
+				C10000000000000000000016 /* Issues */,
+				C10000000000000000000017 /* Ready */,
+				C10000000000000000000018 /* Settings */,
+				C10000000000000000000019 /* Shared */,
 				C10000000000000000000006 /* Sidebar */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
+		C10000000000000000000014 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				A1A0000000000000000000F1 /* DepNodeRowView.swift */,
+				A1A0000000000000000000F2 /* DependencyTreeView.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		C10000000000000000000015 /* EventLog */ = {
+			isa = PBXGroup;
+			children = (
+				A1A0000000000000000000F3 /* EventLogView.swift */,
+				A1A0000000000000000000F4 /* EventRowView.swift */,
+			);
+			path = EventLog;
+			sourceTree = "<group>";
+		};
+		C10000000000000000000016 /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+				A1A0000000000000000000F5 /* GitInfoSection.swift */,
+				A1A0000000000000000000F6 /* IssueCreateSheet.swift */,
+				A1A0000000000000000000F7 /* IssueDetailView.swift */,
+				A1A0000000000000000000F8 /* IssueEditSheet.swift */,
+				A1A0000000000000000000F9 /* IssueFilterBar.swift */,
+				A1A0000000000000000000FA /* IssueListView.swift */,
+				A1A0000000000000000000FB /* IssueRowView.swift */,
+				A1A0000000000000000000FC /* WorkerInfoSection.swift */,
+			);
+			path = Issues;
+			sourceTree = "<group>";
+		};
+		C10000000000000000000017 /* Ready */ = {
+			isa = PBXGroup;
+			children = (
+				A1A0000000000000000000FD /* ReadyView.swift */,
+			);
+			path = Ready;
+			sourceTree = "<group>";
+		};
+		C10000000000000000000018 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A1A0000000000000000000FE /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C10000000000000000000019 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A1A00000000000000000FF01 /* EmptyStateView.swift */,
+				A1A00000000000000000FF02 /* ErrorBanner.swift */,
+				A1A00000000000000000FF03 /* IssueSearchField.swift */,
+				A1A00000000000000000FF04 /* IssueTypeahead.swift */,
+				A1A00000000000000000FF05 /* LoadingOverlay.swift */,
+				A1A00000000000000000FF06 /* PriorityBadge.swift */,
+				A1A00000000000000000FF07 /* StatusBadge.swift */,
+				A1A00000000000000000FF08 /* TypeBadge.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		C10000000000000000000006 /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
-				A10000000000000000000007 /* SidebarView.swift */,
-				A10000000000000000000008 /* ProjectSelectorView.swift */,
+				A1A00000000000000000FF09 /* ProjectSelectorView.swift */,
+				A1A00000000000000000FF0A /* SidebarView.swift */,
 			);
 			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		C10000000000000000000013 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A1A00000000000000000FF0B /* PreviewData.swift */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		C10000000000000000000007 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A10000000000000000000009 /* Assets.xcassets */,
+				A1A00000000000000000FF0C /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -97,16 +378,19 @@
 			isa = PBXGroup;
 			children = (
 				D10000000000000000000002 /* PebbleVision.app */,
+				D10000000000000000000003 /* PebbleVisionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C10000000000000000000000 /* Root */ = {
+		C10000000000000000000009 /* PebbleVisionTests */ = {
 			isa = PBXGroup;
 			children = (
-				C10000000000000000000001 /* PebbleVision */,
-				C10000000000000000000008 /* Products */,
+				A1A00000000000000000FFA1 /* ModelTests.swift */,
+				A1A00000000000000000FFA2 /* PBJSONParserTests.swift */,
+				A1A00000000000000000FFA3 /* PBOutputParserTests.swift */,
 			);
+			path = PebbleVisionTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +413,23 @@
 			productReference = D10000000000000000000002 /* PebbleVision.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D20000000000000000000001 /* PebbleVisionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F20000000000000000000006 /* Build configuration list for PBXNativeTarget "PebbleVisionTests" */;
+			buildPhases = (
+				E20000000000000000000001 /* Sources */,
+				E20000000000000000000003 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2A0000000000000000000DD /* PBXTargetDependency */,
+			);
+			name = PebbleVisionTests;
+			productName = PebbleVisionTests;
+			productReference = D10000000000000000000003 /* PebbleVisionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -141,6 +442,10 @@
 				TargetAttributes = {
 					D10000000000000000000001 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					D20000000000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = D10000000000000000000001;
 					};
 				};
 			};
@@ -158,6 +463,7 @@
 			projectRoot = "";
 			targets = (
 				D10000000000000000000001 /* PebbleVision */,
+				D20000000000000000000001 /* PebbleVisionTests */,
 			);
 		};
 /* End PBXProject section */
@@ -167,7 +473,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B10000000000000000000009 /* Assets.xcassets in Resources */,
+				B1A00000000000000000FF0C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,16 +484,80 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B10000000000000000000003 /* PebbleVisionApp.swift in Sources */,
-				B10000000000000000000004 /* AppState.swift in Sources */,
-				B10000000000000000000005 /* ContentView.swift in Sources */,
-				B10000000000000000000006 /* ProjectManagerViewModel.swift in Sources */,
-				B10000000000000000000007 /* SidebarView.swift in Sources */,
-				B10000000000000000000008 /* ProjectSelectorView.swift in Sources */,
+				B1A0000000000000000000A1 /* PebbleVisionApp.swift in Sources */,
+				B1A0000000000000000000A2 /* AppState.swift in Sources */,
+				B1A0000000000000000000A3 /* ContentView.swift in Sources */,
+				B1A0000000000000000000B1 /* Dependency.swift in Sources */,
+				B1A0000000000000000000B2 /* Event.swift in Sources */,
+				B1A0000000000000000000B3 /* GitCommit.swift in Sources */,
+				B1A0000000000000000000B4 /* Issue.swift in Sources */,
+				B1A0000000000000000000B5 /* IssueComment.swift in Sources */,
+				B1A0000000000000000000B6 /* PBError.swift in Sources */,
+				B1A0000000000000000000B7 /* PBTypes.swift in Sources */,
+				B1A0000000000000000000B8 /* Project.swift in Sources */,
+				B1A0000000000000000000B9 /* WorkerInfo.swift in Sources */,
+				B1A0000000000000000000C1 /* GitInfoService.swift in Sources */,
+				B1A0000000000000000000C2 /* PBClient.swift in Sources */,
+				B1A0000000000000000000C3 /* PBJSONParser.swift in Sources */,
+				B1A0000000000000000000C4 /* PBOutputParser.swift in Sources */,
+				B1A0000000000000000000C5 /* ProjectStore.swift in Sources */,
+				B1A0000000000000000000C6 /* WorkerInfoService.swift in Sources */,
+				B1A0000000000000000000D1 /* DateFormatting.swift in Sources */,
+				B1A0000000000000000000D2 /* ProcessRunner.swift in Sources */,
+				B1A0000000000000000000E1 /* DependencyTreeViewModel.swift in Sources */,
+				B1A0000000000000000000E2 /* EventLogViewModel.swift in Sources */,
+				B1A0000000000000000000E3 /* IssueCreateViewModel.swift in Sources */,
+				B1A0000000000000000000E4 /* IssueDetailViewModel.swift in Sources */,
+				B1A0000000000000000000E5 /* IssueListViewModel.swift in Sources */,
+				B1A0000000000000000000E6 /* ProjectManagerViewModel.swift in Sources */,
+				B1A0000000000000000000E7 /* ReadyViewModel.swift in Sources */,
+				B1A0000000000000000000F1 /* DepNodeRowView.swift in Sources */,
+				B1A0000000000000000000F2 /* DependencyTreeView.swift in Sources */,
+				B1A0000000000000000000F3 /* EventLogView.swift in Sources */,
+				B1A0000000000000000000F4 /* EventRowView.swift in Sources */,
+				B1A0000000000000000000F5 /* GitInfoSection.swift in Sources */,
+				B1A0000000000000000000F6 /* IssueCreateSheet.swift in Sources */,
+				B1A0000000000000000000F7 /* IssueDetailView.swift in Sources */,
+				B1A0000000000000000000F8 /* IssueEditSheet.swift in Sources */,
+				B1A0000000000000000000F9 /* IssueFilterBar.swift in Sources */,
+				B1A0000000000000000000FA /* IssueListView.swift in Sources */,
+				B1A0000000000000000000FB /* IssueRowView.swift in Sources */,
+				B1A0000000000000000000FC /* WorkerInfoSection.swift in Sources */,
+				B1A0000000000000000000FD /* ReadyView.swift in Sources */,
+				B1A0000000000000000000FE /* SettingsView.swift in Sources */,
+				B1A00000000000000000FF01 /* EmptyStateView.swift in Sources */,
+				B1A00000000000000000FF02 /* ErrorBanner.swift in Sources */,
+				B1A00000000000000000FF03 /* IssueSearchField.swift in Sources */,
+				B1A00000000000000000FF04 /* IssueTypeahead.swift in Sources */,
+				B1A00000000000000000FF05 /* LoadingOverlay.swift in Sources */,
+				B1A00000000000000000FF06 /* PriorityBadge.swift in Sources */,
+				B1A00000000000000000FF07 /* StatusBadge.swift in Sources */,
+				B1A00000000000000000FF08 /* TypeBadge.swift in Sources */,
+				B1A00000000000000000FF09 /* ProjectSelectorView.swift in Sources */,
+				B1A00000000000000000FF0A /* SidebarView.swift in Sources */,
+				B1A00000000000000000FF0B /* PreviewData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E20000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1A00000000000000000FFA1 /* ModelTests.swift in Sources */,
+				B1A00000000000000000FFA2 /* PBJSONParserTests.swift in Sources */,
+				B1A00000000000000000FFA3 /* PBOutputParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2A0000000000000000000DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D10000000000000000000001 /* PebbleVision */;
+			targetProxy = C1A00000000000000000CC01 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F10000000000000000000001 /* Debug */ = {
@@ -252,7 +622,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_ASSET_PATHS = "\"PebbleVision/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -278,7 +648,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_ASSET_PATHS = "\"PebbleVision/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -291,6 +661,38 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F20000000000000000000004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pebbleVision.PebbleVisionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PebbleVision.app/Contents/MacOS/PebbleVision";
+			};
+			name = Debug;
+		};
+		F20000000000000000000005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pebbleVision.PebbleVisionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PebbleVision.app/Contents/MacOS/PebbleVision";
 			};
 			name = Release;
 		};
@@ -311,6 +713,15 @@
 			buildConfigurations = (
 				F10000000000000000000004 /* Debug */,
 				F10000000000000000000005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F20000000000000000000006 /* Build configuration list for PBXNativeTarget "PebbleVisionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F20000000000000000000004 /* Debug */,
+				F20000000000000000000005 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
