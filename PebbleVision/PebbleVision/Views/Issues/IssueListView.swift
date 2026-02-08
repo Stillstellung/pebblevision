@@ -24,6 +24,8 @@ struct IssueListView: View {
                     }
                     .buttonStyle(.plain)
                 }
+
+                IssueSortMenu(sortField: $viewModel.sortField, sortAscending: $viewModel.sortAscending)
             }
             .padding(.horizontal, 10)
             .padding(.vertical, 6)
@@ -42,13 +44,13 @@ struct IssueListView: View {
                 .padding(.top, 8)
             }
 
-            if viewModel.filteredIssues.isEmpty && !viewModel.isLoading {
+            if viewModel.sortedIssues.isEmpty && !viewModel.isLoading {
                 EmptyStateView(
                     icon: "doc.text.magnifyingglass",
                     message: viewModel.searchText.isEmpty ? "No issues found" : "No matching issues"
                 )
             } else {
-                List(viewModel.filteredIssues, selection: $selectedIssueID) { issue in
+                List(viewModel.sortedIssues, selection: $selectedIssueID) { issue in
                     IssueRowView(issue: issue)
                         .tag(issue.id)
                 }

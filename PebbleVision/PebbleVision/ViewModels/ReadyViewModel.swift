@@ -9,6 +9,27 @@ final class ReadyViewModel {
     var isLoading = false
     var error: PBError?
 
+    // Sort state
+    var sortField: IssueSortField = .date
+    var sortAscending = false
+
+    var sortedReadyIssues: [Issue] {
+        readyIssues.sorted { a, b in
+            let result: Bool
+            switch sortField {
+            case .date:
+                result = (a.createdAt ?? .distantPast) < (b.createdAt ?? .distantPast)
+            case .priority:
+                result = a.priority < b.priority
+            case .type:
+                result = a.issueType.localizedCompare(b.issueType) == .orderedAscending
+            case .status:
+                result = a.status.sortOrder < b.status.sortOrder
+            }
+            return sortAscending ? result : !result
+        }
+    }
+
     private let client: PBClient
     private let project: Project
 
